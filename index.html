@@ -1,57 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sumit - Portfolio</title>
+    <title>Sumit's Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <header>
-        <h1>Sumit</h1>
-        <p>Countdown to New Year 2025:</p>
-        <div id="countdown">
-            <span id="days">00</span> Days 
-            <span id="hours">00</span> Hours 
-            <span id="minutes">00</span> Minutes 
-            <span id="seconds">00</span> Seconds
-        </div>
+        <h1>Welcome to Sumit's Portfolio</h1>
     </header>
 
     <main class="container">
-        
+        <!-- Left side: Countdown & Preview Button -->
+        <div class="left-section">
+            <h2>DD:HH:MM:SS</h2>
+            <p>New Year Countdown</p>
+            <button id="preview-btn">Preview</button>
+
+            <!-- Countdown display (Initially hidden) -->
+            <div id="countdown" style="display: none;">
+                <span id="days">00</span> Days
+                <span id="hours">00</span> Hours
+                <span id="minutes">00</span> Minutes
+                <span id="seconds">00</span> Seconds
+            </div>
+        </div>
 
         <!-- Right side: Picture and Info Section -->
         <div class="right-section">
             <div class="top-right">
                 <button id="demo-btn">Demo button</button>
                 <div class="message">
-                    <p>This will show a Happy New Year message as we approach New Year (00:00)</p>
+                    <p>This will show a Happy New Year message with confetti as we approach the New Year!</p>
                 </div>
             </div>
-            
+
             <div class="bottom-right">
-                <img src="batman.jpg" alt="" id="profile-pic">
+                <img src="batman.jpg" alt="A Picture" id="profile-pic">
                 <div class="info">
-                    <h3>About me</h3>
-                    <p>Hello! I'm Sumit, a budding developer with a passion for coding and problem-solving.</p>
-                    <p><strong>Skills:</strong> HTML, CSS, JS</p>
+                    <h3>About Me</h3>
+                    <p>Hello! I'm Sumit, a budding developer with a passion for coding and problem-solving</p>
+                    <p><strong>Skills:</strong> HTML, CSS, JavaScript</p>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Confetti container for animation -->
-    <div class="party-animation"></div>
-
+    <!-- Modal Section for Demo -->
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2>Happy New Year 2025!</h2>
-            <p>Wishing you all the best in the year ahead. Celebrate in style!</p>
+            <div class="party-animation"></div>
+            <p>Happy New Year!</p>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
