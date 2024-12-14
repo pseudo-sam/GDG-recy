@@ -34,7 +34,7 @@ function startCountdown() {
     var newYearDate = new Date("January 1, 2025 00:00:00").getTime();
 
     // Update the countdown every 1 second
-    var x = setInterval(function() {
+    var x = setInterval(function () {
         // Get the current date and time
         var now = new Date().getTime();
 
@@ -61,27 +61,33 @@ function startCountdown() {
     }, 1000);
 }
 
+// When the user clicks on the button, show countdown and modal and add confetti
+document.getElementById("preview-btn").onclick = function () {
+    // Show the countdown section when Preview button is clicked
+    document.getElementById("countdown").style.display = "block";
+
+    // Start the countdown function
+    startCountdown();
+};
+
 // When the user clicks on the button, open the modal and add confetti
-btn.onclick = function() {
+btn.onclick = function () {
     modal.style.display = "block";
     generateConfetti();
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+span.onclick = function () {
     modal.style.display = "none";
     // Clear all confetti on closing
     document.querySelector(".party-animation").innerHTML = "";
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
         // Clear confetti
         document.querySelector(".party-animation").innerHTML = "";
     }
 }
-
-// Start the countdown when the page loads
-startCountdown();
